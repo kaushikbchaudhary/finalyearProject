@@ -8,7 +8,11 @@
   color: rgba(0, 0, 0, 0.5); }
 
 .hidden {
-  display: none; }
+  display: none;
+  visibility: hidden; }
+
+.inline {
+  padding: 5px; }
 
 * {
   margin: 0;
@@ -70,38 +74,38 @@ body {
         border-bottom: 3px solid red;
         border-radius: 1px;
         color: red; }
-  .nav .nav-right-container {
+  .nav .nav-right {
     flex-grow: 1; }
-    .nav .nav-right-container div {
+    .nav .nav-right div {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
       justify-self: flex-start;
       margin: 40px;
       flex-shrink: 0; }
-      .nav .nav-right-container div ul {
+      .nav .nav-right div ul {
         padding: inherit;
         display: flex;
         flex-direction: row; }
-        .nav .nav-right-container div ul li a {
+        .nav .nav-right div ul li a {
           color: red; }
-        .nav .nav-right-container div ul li a:hover {
+        .nav .nav-right div ul li a:hover {
           color: #c30a0a; }
-        .nav .nav-right-container div ul li:first-child {
+        .nav .nav-right div ul li:first-child {
           padding-right: 18px; }
 
-.home-container {
+.home {
   background-color: #333; }
-  .home-container .content {
+  .home .home-content {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 50vh;
-    z-index: 10;
+    z-index: 5;
     color: #fff; }
-  .home-container .content::before {
+  .home .home-content::before {
     content: "";
     background: url("https://source.unsplash.com/1600x900/?nature,water") no-repeat center center/cover;
     position: absolute;
@@ -111,30 +115,30 @@ body {
     height: 100%;
     opacity: 0.2;
     z-index: -1; }
-  .home-container h1 {
+  .home h1 {
     font-size: 2.5rem;
     text-shadow: 0.2rem 0.2rem 1rem steelblue; }
-  .home-container p {
+  .home p {
     margin: 12px 0; }
-  .home-container .search-fild {
+  .home .search-fild {
     border: 0px solid;
     background-color: #fff; }
-    .home-container .search-fild input:first-child {
+    .home .search-fild input:first-child {
       border-right: #333 1px solid; }
-    .home-container .search-fild input {
+    .home .search-fild input {
       padding: 10px;
       border: none; }
-    .home-container .search-fild input:focus {
+    .home .search-fild input:focus {
       outline: none; }
-    .home-container .search-fild input[type="submit"] {
+    .home .search-fild input[type="submit"] {
       background-color: red;
       color: #fff;
       font-size: 1.2em; }
 
-.testimonial-container {
+.testimonials {
   display: grid;
   grid-template-columns: repeat(4, 1fr); }
-  .testimonial-container .testimonial {
+  .testimonials .testimonial {
     background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
@@ -144,12 +148,12 @@ body {
     border-radius: 5px;
     flex-shrink: 0;
     overflow: hidden; }
-    .testimonial-container .testimonial img {
+    .testimonials .testimonial img {
       height: 50%;
       width: 100%;
       border-top-left-radius: inherit;
       border-top-right-radius: inherit; }
-    .testimonial-container .testimonial .testimonial-content {
+    .testimonials .testimonial .testimonial-content {
       display: flex;
       flex-direction: column;
       text-align: left;
@@ -157,7 +161,7 @@ body {
       justify-content: center;
       height: 100%;
       padding: 10px; }
-  .testimonial-container .testimonial:hover {
+  .testimonials .testimonial:hover {
     transform: scale(1.01);
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3), -10px -10px 20px rgba(0, 0, 0, 0.3); }
 
@@ -175,7 +179,11 @@ body {
     transform: scale(1.02);
     background-color: rgba(0, 0, 0, 0.1); }
 
-.signup-form {
+.forms {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
   background-color: #f4f4f4;
   height: 100;
   width: 100vw;
@@ -186,7 +194,7 @@ body {
   text-align: center;
   align-items: center;
   margin: auto; }
-  .signup-form .nav-login-page {
+  .forms .nav-login-page {
     position: relative;
     text-align: center;
     display: flex;
@@ -196,9 +204,9 @@ body {
     margin-top: 15px;
     font-size: 22px;
     height: 70px; }
-    .signup-form .nav-login-page .text-bold {
+    .forms .nav-login-page .text-bold {
       font-weight: bold; }
-  .signup-form .signup-container {
+  .forms .form-container {
     overflow: hidden;
     max-width: 833px;
     background-color: #fff;
@@ -208,27 +216,27 @@ body {
     margin: 5px;
     border-radius: 5px;
     font-family: Arial, Helvetica, sans-serif; }
-    .signup-form .signup-container .log-in-img {
+    .forms .form-container .form-side-img {
       height: 100%;
       width: 100%;
       background-color: #333; }
-      .signup-form .signup-container .log-in-img img {
+      .forms .form-container .form-side-img img {
         height: 100;
         width: 100; }
-      .signup-form .signup-container .log-in-img h2 {
+      .forms .form-container .form-side-img h2 {
         margin: auto auto;
         text-shadow: 3px 3px 5px #fff; }
-    .signup-form .signup-container form {
+    .forms .form-container form {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       padding: 60px 80px; }
-      .signup-form .signup-container form h4,
-      .signup-form .signup-container form h3 {
+      .forms .form-container form h4,
+      .forms .form-container form h3 {
         text-transform: none; }
-      .signup-form .signup-container form .sign-up-free {
+      .forms .form-container form .sign-up-free {
         color: red; }
-      .signup-form .signup-container form .btn {
+      .forms .form-container form .btn {
         width: 100%;
         padding: 12px 0;
         align-self: center;
@@ -237,30 +245,38 @@ body {
         margin: 4px 0;
         background-color: #fff;
         font-size: 17px; }
-      .signup-form .signup-container form input {
+      .forms .form-container form input {
         padding: 12px 0;
         border: none;
         border-bottom: 1px solid rgba(0, 0, 0, 0.3); }
-      .signup-form .signup-container form input:focus {
+      .forms .form-container form input:focus {
         outline: none; }
-      .signup-form .signup-container form button[type="submit"] {
+      .forms .form-container form .flex-row {
+        display: grid;
+        grid-template-areas: ".input-location" ".country" ".event-date" ".mobile-number" ".category" ".category"; }
+      .forms .form-container form .input-location,
+      .forms .form-container form .country,
+      .forms .form-container form .event-date,
+      .forms .form-container form .mobile-number {
+        margin: 10px 5px; }
+      .forms .form-container form button[type="submit"] {
         margin: 15px 0;
         background-color: red;
         color: #fff;
         border: none;
         font-weight: bold; }
-      .signup-form .signup-container form a:hover {
+      .forms .form-container form a:hover {
         color: red; }
 
-.footer-sign-in-page {
+.footer-of-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
-  .footer-sign-in-page a {
+  .footer-of-form a {
     margin-right: 5px;
     color: rgba(0, 0, 0, 0.5); }
-    .footer-sign-in-page a:hover {
+    .footer-of-form a:hover {
       color: red; }
-  .footer-sign-in-page p {
+  .footer-of-form p {
     color: rgba(0, 0, 0, 0.5); }

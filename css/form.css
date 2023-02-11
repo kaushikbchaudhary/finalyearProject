@@ -1,0 +1,176 @@
+.block {
+  display: block;
+}
+
+.logo {
+  color: red;
+}
+
+.gray-text {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.inline {
+  padding: 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.6;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  line-height: 1.5;
+}
+
+.forms {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #f4f4f4;
+  height: 100;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+}
+.forms .nav-login-page {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 22px;
+  height: 70px;
+}
+.forms .nav-login-page .text-bold {
+  font-weight: bold;
+}
+.forms .form-container {
+  overflow: hidden;
+  max-width: 833px;
+  background-color: #fff;
+  height: 733px;
+  display: grid;
+  grid-template-columns: 1.3fr 2fr;
+  margin: 5px;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.forms .form-container .form-side-img {
+  height: 100%;
+  width: 100%;
+  background-color: #333;
+}
+.forms .form-container .form-side-img img {
+  height: 100;
+  width: 100;
+}
+.forms .form-container .form-side-img h2 {
+  margin: auto auto;
+  text-shadow: 3px 3px 5px #fff;
+}
+.forms .form-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 60px 80px;
+}
+.forms .form-container form h4,
+.forms .form-container form h3 {
+  text-transform: none;
+}
+.forms .form-container form .sign-up-free {
+  color: red;
+}
+.forms .form-container form .btn {
+  width: 100%;
+  padding: 12px 0;
+  align-self: center;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  margin: 4px 0;
+  background-color: #fff;
+  font-size: 17px;
+}
+.forms .form-container form input {
+  padding: 12px 0;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+.forms .form-container form input:focus {
+  outline: none;
+}
+.forms .form-container form .flex-row {
+  display: grid;
+  grid-template-areas: ".input-location" ".country" ".event-date" ".mobile-number" ".category" ".category";
+}
+.forms .form-container form .input-location,
+.forms .form-container form .country,
+.forms .form-container form .event-date,
+.forms .form-container form .mobile-number {
+  margin: 10px 5px;
+}
+.forms .form-container form button[type="submit"] {
+  margin: 15px 0;
+  background-color: red;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+}
+.forms .form-container form a:hover {
+  color: red;
+}
+
+.footer-of-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer-of-form a {
+  margin-right: 5px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.footer-of-form a:hover {
+  color: red;
+}
+.footer-of-form p {
+  color: rgba(0, 0, 0, 0.5);
+}
